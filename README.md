@@ -1,66 +1,26 @@
-# AI-Powered Lead Generation, Qualification, and Auto-Scheduling
+# Zero Touch Lead Booking
 
-An automation workflow that captures leads, stores their info, uses AI to qualify them, and auto-schedules high-intent prospects by pulling open calendar slots and emailing an offer to book.
+Zero Touch Lead Booking is an AI-assisted automation system for handling inbound leads and scheduling workflows.
 
-## Workflow (What happens)
-1. **Lead Generation Form**  
-   A lead submits their info (name, email, company, message, etc.).
+## Overview
 
-2. **Workflow Configuration (manual)**  
-   Your rules + settings live here (score threshold, calendar to use, email template).
+The project is designed to automate lead intake, qualification, and follow-up actions with minimal manual involvement.
 
-3. **Store Lead Data**  
-   Saves the lead in a table/database for tracking and follow-up.
+## Usage Notice
 
-4. **AI Lead Qualifier (OpenAI + schema)**  
-   The AI reviews the lead details and returns structured output (score, intent, fit notes).
+This repository is public for visibility and reference only.
 
-5. **Route High-Score Leads**  
-   Only leads above your threshold continue to scheduling.
+Please **do not use, copy, modify, deploy, or redistribute this project without contacting me first**.
 
-6. **Get Available Slots (Google Calendar)**  
-   Pulls upcoming availability / open times.
+If you are interested in using this system, adapting it for your business, or collaborating, reach out via the link in my bio so I can assist and approve proper usage.
 
-7. **Send Offer Email (Gmail)**  
-   Sends the lead a scheduling offer with available options (or a booking link).
+## Notes
 
-## Features
-- AI-based **lead scoring + qualification**
-- **Structured output** using a qualification schema
-- Automatic **routing** based on score/intent
-- Calendar integration to **fetch availability**
-- Email automation to **send meeting offers**
-- Lead storage for reporting and audit trail
+Implementation details, configuration logic, and workflow structure are intentionally limited in this repository.
 
-## Requirements
-- OpenAI API key
-- Google Calendar access (OAuth/service account depending on your setup)
-- Gmail access (OAuth or SMTP depending on your setup)
-- A database/table for lead storage (optional but recommended)
+## Topics
 
-## Environment Variables
-Create a `.env` file (or set these in your automation platform):
-
-- `OPENAI_API_KEY`
-- `QUALIFICATION_MODEL` (example: `gpt-4.1-mini` or your chosen model)
-- `LEAD_SCORE_THRESHOLD` (example: `75`)
-- `GOOGLE_CALENDAR_ID`
-- `GMAIL_FROM_EMAIL`
-- `TIMEZONE` (example: `America/New_York`)
-
-Optional:
-- `BOOKING_LINK` (if you prefer sending a link instead of slot options)
-- `DB_CONNECTION_STRING` (if using an external database)
-
-## Qualification Output (Example Schema)
-Your AI step should return something like:
-
-```json
-{
-  "score": 0,
-  "isQualified": false,
-  "intent": "low|medium|high",
-  "reason": "short explanation",
-  "recommendedNextStep": "email_followup|schedule_offer|disqualify",
-  "notes": "any extra context"
-}
+ai  
+automation  
+lead-generation  
+scheduling  
